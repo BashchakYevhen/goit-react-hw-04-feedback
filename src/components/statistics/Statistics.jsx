@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { StatHead, ListElem, Text } from './Statistics.style';
 export const Statistics = ({
   good,
@@ -34,4 +35,12 @@ export const Statistics = ({
       </ul>
     </>
   );
+};
+Statistics.propTypes = {
+  good: PropTypes.number.isRequired,
+  bad: PropTypes.number.isRequired,
+  neutral: PropTypes.number.isRequired,
+  total: PropTypes.number.isRequired,
+  percentage: PropTypes.number.isRequired,
+  title: PropTypes.string.isRequired,
 };
